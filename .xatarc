@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://dan-s-workspace-79hg6m.eu-west-1.xata.sh/db/email",
-  "codegen": {
-    "output": "lib/xata.ts"
-  }
-}

@@ -7,8 +7,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Next.js Project",
-  description: "Created with Next.js, shadcn/ui, Xata, and Resend",
+  title: "Dan's Email Sender",
+  description: "Email sender for my personal domains :D",
 };
 
 export default function RootLayout({
