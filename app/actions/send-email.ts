@@ -4,8 +4,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Hardcoded "from" email address
-const FROM_EMAIL = "your-verified-email@yourdomain.com";
+const FROM_EMAIL = process.env.EMAIL || "d@niel.lol";
 
 export async function sendEmail(formData: FormData) {
   const to = formData.get("to") as string;
