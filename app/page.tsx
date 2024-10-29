@@ -1,14 +1,14 @@
 import EmailForm from "@/components/email-form";
 import { redirect } from "next/navigation";
 
-const PASSWORD = process.env.ACCESS_PASSWORD;
-
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
-  searchParams: { p?: string };
+  searchParams: { [pass: string]: string | undefined };
 }) {
-  if (!searchParams.p || searchParams.p !== PASSWORD) {
+  try {
+    if (searchParams.pass !== process.env.ACCESS_PASSWORD) redirect("/fail");
+  } catch {
     redirect("/fail");
   }
 
